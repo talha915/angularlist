@@ -1,0 +1,19 @@
+<p>
+  lists works!
+</p>
+<div *ngFor="let list of cribs">
+  <h3>
+    Id:{{list.id}}
+  </h3>
+  <h4>
+    Type: {{list.type | uppercase}}
+  </h4>
+  <h5>
+    Price: {{list.price}}
+  </h5>
+  <h6>
+    Description: {{list.description}}
+  </h6>
+  <input [(ngModel)]="name" type="text">
+  {{name}}
+</div>
