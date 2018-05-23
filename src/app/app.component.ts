@@ -9,11 +9,16 @@ import { RecordsService } from './records.service';
 export class AppComponent {
   title = 'app';
   records={};
+  myrecords={};
   constructor(private myFirstService: RecordsService){
 
   }
   ngOnInit(){
     this.records = this.myFirstService.getData(); 
     console.log(this.records)
+
+    this.myrecords=this.myFirstService.getDetails()
+      .subscribe(data => this.myrecords = data);
+    console.log(this.myrecords)   
   }
 }

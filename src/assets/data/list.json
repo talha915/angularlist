@@ -1,22 +1,5 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { IDetails } from './Details';
-import { Observable } from 'rxjs/Observable';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class RecordsService {
-  private url : string = "/assets/data/list.json";
-  constructor(private http: HttpClient) { }
-
-  getDetails(): Observable<IDetails[]>{
-    return this.http.get<IDetails[]>(this.url);
-  }
-
-  getData() {
-    return [
-      {
+[
+    {
         "id": 1,
         "type": "Condo",
         "price": 220000,
@@ -26,8 +9,8 @@ export class RecordsService {
         "bathrooms": 1.5,
         "area": 921,
         "image": "crib-1"
-      },
-      {
+    },
+    {
         "id": 2,
         "type": "House",
         "price": 410500,
@@ -37,8 +20,8 @@ export class RecordsService {
         "bathrooms": 3,
         "area": 2145,
         "image": "crib-2"
-      },
-      {
+    },
+    {
         "id": 3,
         "type": "Duplex",
         "price": 395000,
@@ -48,8 +31,8 @@ export class RecordsService {
         "bathrooms": 2.5,
         "area": 1500,
         "image": "crib-3"
-      },
-      {
+    },
+    {
         "id": 4,
         "type": "House",
         "price": 755990,
@@ -59,8 +42,8 @@ export class RecordsService {
         "bathrooms": 4.5,
         "area": 3230,
         "image": "crib-4"
-      },
-      {
+    },
+    {
         "id": 5,
         "type": "Condo",
         "price": 210500,
@@ -70,8 +53,8 @@ export class RecordsService {
         "bathrooms": 1.5,
         "area": 1023,
         "image": "crib-5"
-      },
-      {
+    },
+    {
         "id": 6,
         "type": "House",
         "price": 334900,
@@ -81,7 +64,5 @@ export class RecordsService {
         "bathrooms": 2.5,
         "area": 1788,
         "image": "crib-6"
-      }
-    ]
-  }
-}
+    }
+]
